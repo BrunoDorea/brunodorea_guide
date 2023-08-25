@@ -1,0 +1,15 @@
+site_name: Documentação | Bruno Dórea
+site_author: Bruno Dórea
+site_url: https://www.brunodorea.com.br/
+
+theme: 
+  name: dracula
+  favicon: https://github.com/BH-Tec.png
+  logo: https://github.com/BrunoDorea.png
+
+nav:
+  - Home: index.md
+  - Projetos:
+    - Chatbot: nav/chatbot.md
+  - Sobre: about.md
+
