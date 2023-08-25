@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-        <title>Documentação | Bruno Dórea</title>
+        <title>Analise de dados Empresarial - Documentação | Bruno Dórea</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        
+        <link rel="canonical" href="https://www.brunodorea.com.br/nav/analise-dados-emp/">
         <meta name="author" content="Bruno Dórea">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./assets/css/dracula-ui.css">
-        <link rel="stylesheet" href="./assets/css/mkdocs.css">
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.css">
 
         
             <link  rel="icon" type="image/x-icon" href="https://github.com/BH-Tec.png">
@@ -66,15 +66,15 @@
         <ul class="mb-5 drac-list drac-list-none">
             
             <li class="drac-box">
-                <a href="./."
+                <a href="../.."
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
                     Home
                 </a>
             </li>
             <li class="drac-box">
-                <a href="./."
-                    class="
+                <a href="../.."
+                    class=" active 
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
                     data-bs-toggle="collapse" data-bs-target="#projetos-collapse" aria-expanded="false">
                     Projetos
@@ -83,7 +83,7 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="./nav/chatbot/"
+        <a href="../chatbot/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Chatbot
@@ -91,15 +91,15 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="./nav/analise-dados-emp/"
-            class="
+        <a href="./"
+            class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Analise de dados Empresarial
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="./nav/analise-dados-bi/"
+        <a href="../analise-dados-bi/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Analise de dados para Business Intelligence
@@ -109,7 +109,7 @@
                 </div>
             </li>
             <li class="drac-box">
-                <a href="./about/"
+                <a href="../../about/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
                     Sobre
@@ -140,12 +140,28 @@
                     <!-- block preview -->
                     <li class="nav-item">
                             
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../chatbot/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../analise-dados-bi/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
                     </li>
                     <!--  endblock -->
 
                     <!-- block search -->
                     <li class="nav-item"><div role="search" class="search-box">
-	<form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
 		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
 		placeholder="Search docs" title="Type search term here" />
 	</form>
@@ -168,25 +184,70 @@
             <!-- endblock -->
 
             <!-- block content -->
-	<section class="p-md-5 content-search">
-		<article>
-			<p></p>
-			<h1 id="search">Search Results</h1>
-			<hr>
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="analise-de-dados-empresarial">Analise de Dados Empresarial</h1>
+<p>Realizar a analise de dados de PDF com a biblioteca PDF Plumber para extrair e manipular informações de diversos relatórios em pdf ao mesmo tempo.</p>
+<p>Vamos utilizar o Google Colab neste projeto.</p>
+<p><a href="https://github.com/BrunoDorea/sigmoidal-bootcamp-python">Repositório do Github</a></p>
+<h2 id="pre-requisitos">Pré-requisitos</h2>
+<ul>
+<li>Instalar a biblioteca do PDF Plumber</li>
+</ul>
+<pre><code class="language-bash">!pip install pdfplumber -q
+</code></pre>
+<h2 id="desenvolvimento">Desenvolvimento</h2>
+<ul>
+<li>importando os pacotes necessários</li>
+</ul>
+<pre><code class="language-python">from google.colab import drive
+import pdfplumber
+import os
+</code></pre>
+<ul>
+<li>mudar para diretório com pdfs da semana</li>
+</ul>
+<pre><code class="language-python">relatorios = '../../docs/modulo_02-projeto/relatorios/'
+</code></pre>
+<ul>
+<li>listar os relatorios</li>
+</ul>
+<pre><code class="language-python">arquivos_semana = os.listdir(relatorios)
+print(arquivos_semana)
+</code></pre>
+<ul>
+<li>abrir um relatório de exemplo</li>
+</ul>
+<pre><code class="language-python">relatorio = pdfplumber.open(relatorios + '/20200801.pdf')
+pagina = relatorio.pages[0]
+</code></pre>
+<ul>
+<li>extrair o texto da primeira página do primeiro relatório</li>
+</ul>
+<pre><code class="language-python">texto = pagina.extract_text()
+print(texto)
+</code></pre>
+<ul>
+<li>buscando o valor da receita</li>
+</ul>
+<pre><code class="language-python">float(texto.split('\n')[3].split('R$')[1])
+</code></pre>
+<ul>
+<li>criando a função para percorrer a lista e buscar os valores</li>
+</ul>
+<pre><code class="language-python">soma = 0
 
-			<form id="content_search" action="search.html">
-				<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-				<input name="q" id="mkdocs-search-query" type="text" class="drac-input drac-input-purple drac-text-white search_input search-query ui-autocomplete-input"
-					placeholder="Search the Docs" autocomplete="off" autofocus title="Type search term here">
-			</form>
-			
-			<div id="mkdocs-search-results" class="search-results" data-no-results-text="No results found">
-				Searching...
-			</div>
-
-		</article>
-	</section>
-
+for arquivo in arquivos_semana:
+    relatorio = pdfplumber.open(arquivo)
+    pagina = relatorio.pages[0]
+    texto = pagina.extract_text()
+    valor = texto.split('\n')[3].split('R$')[1]
+    valor = float(valor)
+    soma = soma + valor
+    print(arquivo, &quot;---&gt;&quot;, valor)
+</code></pre></p>
+    </article>
+</section>
             <!-- endblock -->
 
             <!-- block footer -->
@@ -203,11 +264,11 @@
 
     </main>
 
-        <script>var base_url = '.';</script>
-        <script src="./assets/js/jquery-3.3.1.slim.min.js""></script>
-        <script src="./assets/js/bootstrap.bundle.min.js""></script>
-        <script src="./assets/js/mkdocs.js""></script>
-			<script src="./search/main.js" defer></script>
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js""></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js""></script>
+        <script src="../../assets/js/mkdocs.js""></script>
+			<script src="../../search/main.js" defer></script>
 
 </body>
 

@@ -89,6 +89,22 @@
             Chatbot
         </a>
     </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../analise-dados-emp/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Analise de dados Empresarial
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../analise-dados-bi/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Analise de dados para Business Intelligence
+        </a>
+    </li>
                     </ul>
                 </div>
             </li>
@@ -133,7 +149,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../../about/"
+                    <a href="../analise-dados-emp/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
@@ -211,7 +227,7 @@ import streamlit as st
 <li>Cria uma barra lateral na aplicação Streamlit para inserir a chave da API da OpenAI</li>
 </ul>
 <pre><code class="language-python">with st.sidebar:
-    openai_api_key = st.text_input(&quot;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&quot;, type=&quot;password&quot;)
+    openai_api_key = st.text_input(&quot;Chave da API da OpenAI&quot;, type=&quot;password&quot;)
 </code></pre>
 <ul>
 <li>Se a chave "messages" não estiver presente no estado da sessão, inicializa com uma mensagem padrão do assistente</li>
@@ -252,7 +268,12 @@ import streamlit as st
 </code></pre>
 <h2 id="executando-o-streamlit">Executando o StreamLit</h2>
 <p>No terminal digitar o comando <code>streamlit run app.py</code> e aguardar um pouco e o navegador irá abrir na página <a href="http://localhost:8501">http://localhost:8501</a> para testar a aplicação.</p>
-<p><img alt="Chatbot" src="../../image/chatbot.png" /></p></p>
+<p><img alt="Chatbot" src="../../image/chatbot.png" /></p>
+<h2 id="deploy">Deploy</h2>
+<p>Para realizar o deploy do projeto, é necessário criar uma conta no <a href="https://streamlit.io/">streamlit</a>. Também é necessário adicionar o projeto no <a href="https://github.com/">Github</a>.</p>
+<p>Após estar logado no streamlit, clicar em <code>New app</code> e realizar a configuração do app.</p>
+<p><img alt="Config Streamlit" src="../../image/streamlit_config.png" /></p>
+<p>Ao final desta configuração a aplicação estará no ar para todos utilizarem.</p></p>
     </article>
 </section>
             <!-- endblock -->
