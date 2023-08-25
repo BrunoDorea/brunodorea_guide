@@ -103,3 +103,13 @@ if prompt := st.chat_input():
 No terminal digitar o comando `streamlit run app.py` e aguardar um pouco e o navegador irá abrir na página [http://localhost:8501](http://localhost:8501) para testar a aplicação.
 
 ![Chatbot](../image//chatbot.png)
+
+## Deploy
+
+Para realizar o deploy do projeto, é necessário criar uma conta no [streamlit](https://streamlit.io/). Também é necessário adicionar o projeto no [Github](https://github.com/).
+
+Após estar logado no streamlit, clicar em `New app` e realizar a configuração do app.
+
+![Config Streamlit](../image/streamlit_config.png)
+
+Ao final desta configuração a aplicação estará no ar para todos utilizarem.
