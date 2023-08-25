@@ -55,7 +55,7 @@ class StreamHandler(BaseCallbackHandler):
 
 ```python
 with st.sidebar:
-    openai_api_key = st.text_input("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", type="password")
+    openai_api_key = st.text_input("Chave da API da OpenAI", type="password")
 ```
 
 - Se a chave "messages" não estiver presente no estado da sessão, inicializa com uma mensagem padrão do assistente
